@@ -28,11 +28,18 @@ void Grid::print(){
 }
 
 
-void Grid::draw(){
+void Grid::Draw(){
     for(int row = 0; row < numRows; row++){
         for(int cols = 0; cols < numCols; cols++){
             int cellValue = grid[row][cols];
             DrawRectangle(cols * cellSize + 1, row * cellSize + 1, cellSize - 1, cellSize - 1, colors[cellValue]);
         }
     }
+}
+
+bool Grid::IsCellOutside(int row, int column){
+    if(row >= 0 && row < numRows && column >= 0 && column < numCols){
+        return false;
+    }
+    return true; 
 }

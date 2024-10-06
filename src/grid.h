@@ -9,8 +9,8 @@ public:
     void initialize();
     void print();
     int grid[20][10]; 
-    void draw(); 
-
+    void Draw(); 
+    bool IsCellOutside(int row, int column); 
 
 private:
 
