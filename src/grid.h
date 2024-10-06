@@ -14,7 +14,6 @@ public:
 
 private:
 
-    std::vector<Color> getCellColor(); 
     int numRows;
     int numCols;
     int cellSize;
